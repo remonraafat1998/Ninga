@@ -8,6 +8,8 @@
     --thirdColor:#13141a;
    
     --mainBoxShadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    
 }
 
 *
@@ -24,6 +26,7 @@ li
 {
 list-style: none;
 }
+
 body
 {
     font-family: 'Oswald', sans-serif;
@@ -224,7 +227,7 @@ display: flex;
     color: var(--mainColor);
 }
 
-
+ /* landing */
 
 .landing
 {
@@ -408,8 +411,129 @@ display: flex;
 }
 
 
+/* team */
+.team h1 
+{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 22px 0;
+}
+.team h1::after
+{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background: var(--mainColor);
+    bottom: 0;
+    left: 45%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.team .team-member
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 14px 18px;
+    margin: 20px 0;
+}
+.team .team-member .member-circle 
+{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+}
+.team .team-member .member-circle:hover
+{
+    border: 4px solid var(--mainColor);
+}
+.team .team-member .member-circle:hover a img
+{
+    filter: brightness(0.8);
+    -webkit-filter: brightness(0.8);
+}
+.team .team-member .member-circle a img 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
+.contact
+{
+    background: url(../images/bk2.jfif) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-top: 90px;
+    padding: 100px 0;
+    height: 100vh;
+    max-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.contact .box-contact .form-content 
+{
+width: 100%;
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.22);
+display: flex;
+flex-direction: column;
+padding: 40px;
+gap: 26px 0 ;
+overflow: hidden;
+}
+.contact .box-contact .form-content input
+{
+   position: relative;
+   padding: 10px 14px;
+   border: none;
+   outline: none;
+   color: var(--secondColor);
+   font-size: 18px;
+   font-weight: 600;
+   border-radius: 6px ;
+   -webkit-border-radius: 6px ;
+   -moz-border-radius: 6px ;
+   -ms-border-radius: 6px ;
+   -o-border-radius: 6px ;
+}
+.contact .subscrib
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px 0;
+}
 
+/* footer */
 .animationSections
 {
     animation: slid 1s ease-in-out  ;
