@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* global styling */
+
+:root
+{
+    --mainColor: #08dcfe;
+    --secondColor: #1f2029;
+    --thirdColor:#13141a;
+   
+    --mainBoxShadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+}
+li 
+{
+list-style: none;
+}
+body
+{
+    font-family: 'Oswald', sans-serif;
+   height: 100vh;
+   overflow-x: hidden;
+   background: var(--thirdColor);
+}
+.dis-flex-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-btn
+{
+    clip-path:polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+    padding: 16px 34px;
+    background: var(--secondColor);
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.main-btn:hover
+{
+    background: var(--mainColor);
+}
+.circel
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+.circel img 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.p-sec
+{
+    padding: 60px 0;
+}
+/* -------------------------------------------------------------- */
+
+/* header */
+header
+{
+    background-color: var(--secondColor);
+    position:fixed;
+    width: 100%;
+    top: 0;
+    z-index: 888;
+    box-shadow: var(--mainBoxShadow);
+}
+header::after
+{
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 20px;
+    background: var(--secondColor);
+    left: 0;
+    clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+}
+header::before
+{
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 20px;
+    background: var(--secondColor);
+    right: 0;
+    bottom: -18px;
+    clip-path:polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+}
+.nav-area
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 50px;
+}
+.nav-area .logo img 
+{
+    max-width: 100%;
+}
+.nav-area .nav-links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+.nav-area .nav-links ul
+{
+display: flex;
+}
+.nav-area .nav-links ul li 
+{
+    display: list-item;
+    margin: 0 10px;
+}
+.nav-area .nav-links ul li  a
+{
+ position: relative;
+ font-size: 0.5em ;
+ letter-spacing: 1px;
+ color: #fff;
+ text-transform: uppercase;
+ padding: 64px 24px;
+ transition: 0.5s ease-in-out;
+ -webkit-transition: 0.5s ease-in-out;
+ -moz-transition: 0.5s ease-in-out;
+ -ms-transition: 0.5s ease-in-out;
+ -o-transition: 0.5s ease-in-out;
+ letter-spacing: 1.2px;
+}
+.nav-area .nav-links ul li:hover a
+{
+   background: var(--thirdColor);
+   border-bottom: 2px solid var(--mainColor);
+   color: var(--mainColor);
+}
+
+.nav-area .menu-btn
+{
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 16px 16px;
+    font-size: 27px;
+    outline: none;
+}
+
+.nav-area  .action-btns
+{
+    display: flex;
+
+}
+.nav-area  .action-btns .search-area
+{
+    border-right: 4px solid var(--mainColor);
+    padding:10px 14px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.nav-area  .action-btns  button
+{
+    position: relative;
+    padding: 10px 14px;
+    background: var(--thirdColor);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-right: 4px solid var(--mainColor);
+}
+.nav-area  .action-btns  button a {
+    color: #fff;
+    letter-spacing: 2px;
+}
+.nav-area  .action-btns  button:hover
+{
+    background: var(--secondColor);
+}
+.nav-area  .action-btns  button:hover a
+{
+    color: var(--mainColor);
+}
+
+
+
+.landing
+{
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-top: 90px;
+    padding: 100px 0;
+    height: 100vh;
+    max-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.landing p 
+{
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    font-size: 2rem;
+    box-shadow: 0 2px 4px rgba(0 0 0 / 0.24%);
+}
+.landing h1 
+{
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+}
+
+
+/* about */
+.about
+{
+    background: var(--thirdColor);
+}
+.about .about-box 
+{
+    padding: 40px 0;
+}
+.about .about-box  .team-member-box
+{
+    position: relative;
+    background: #1f2029;
+    padding: 50px 40px;
+    max-width: 600px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    box-shadow: var(--mainBoxShadow);
+}
+
+.about .about-box  .team-member-box h3,
+.wards .wards-area .wards-box h3  
+{
+    color: var(--mainColor);
+    font-size: 14px;
+}
+
+.about .about-box  .team-member-box h1,
+.wards .wards-area .wards-box h1 
+{
+    color: #fff;
+   padding: 10px 0;
+}
+.about .about-box  .team-member-box h1 span,
+.wards .wards-area .wards-box span 
+{
+    color: var(--mainColor);
+}
+
+.about .about-box  .team-member-box  p,
+.wards .wards-area .wards-box p 
+{
+    color: #fff;
+    line-height: 1.6;
+    font-family: sans-serif;
+    padding: 20px 0;
+}
+.about .about-box  .team-member-box  span
+{
+    color: #fff;
+}
+.about .about-box  .team-member-box  span svg
+{
+    padding-right:10px  ;
+}
+
+.about .right-img 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+}
+.about .right-img figure img 
+{
+    height: 400px;
+}
+
+/* Wards */
+.wards .prize-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.wards .prize-box span 
+{
+    background: orange;
+    padding: 22px 32px ;
+    border-radius:50px ;
+    -webkit-border-radius:50px ;
+    -moz-border-radius:50px ;
+    -ms-border-radius:50px ;
+    -o-border-radius:50px ;
+    color: #333;
+    font-weight: bold;
+    margin: 6px 0;
+}
+.wards .winners-box
+{
+    background: var(--secondColor);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    max-width: 200px;
+    color: #fff;
+    padding: 45px 40px;
+}
+.wards .winners-box h1 
+{
+    font-size: 1.8rem;
+}
+
+.wards .winners-box  .winners-icons
+{
+    display: flex;
+    justify-content: space-around;
+}
+.wards .winners-box .winners-icons  .winner 
+{
+    margin: 0 4px;
+}
+.wards .winners-box .winners-icons  .winner span 
+{
+    background: var(--mainColor);
+    padding: 10px 14px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    color: #333;
+    font-weight: bold;
+}
+
+.wards .carousel 
+{
+    margin: 40px 0;
+}
+.wards .carousel .carousel-inner
+{
+    max-height: 600px;
+}
+.wards .carousel .carousel-inner img 
+{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    filter: brightness(0.9);
+    -webkit-filter: brightness(0.9);
+}
+
+
+
+
+.animationSections
+{
+    animation: slid 1s ease-in-out  ;
+    -webkit-animation: slid 1s ease-in-out  ;
+}
+@keyframes slid {
+    from
+    {
+        transform: translateX(300px);
+        -webkit-transform: translateX(300px);
+        -moz-transform: translateX(300px);
+        -ms-transform: translateX(300px);
+        -o-transform: translateX(300px);
+}
+to 
+{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+@media screen and (max-width:767) {
+    .landing
+    {
+        margin-top: 20px;
+    }
+    
+}
