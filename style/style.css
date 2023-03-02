@@ -518,7 +518,7 @@ header::before {
     top: 0;
     left: 0;
 }
-
+/* contact */
 .contact {
     background: url(../images/bk2.jfif) no-repeat;
     background-size: cover;
@@ -634,6 +634,7 @@ header::before {
 
 .top-footer .two-top-footer .footer-links ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 14px 30px;
 }
 
@@ -718,6 +719,14 @@ header::before {
         margin-top: 20px;
     }
 
+    .landing p {
+        font-size: 1.2rem;
+    }
+
+    .landing h1 {
+        font-size: 4rem;
+    }
+  
     .nav-area .nav-links {
         position: fixed;
         min-width: 300px;
@@ -758,5 +767,9 @@ header::before {
 
     .nav-area .menu-btn {
         display: block;
+    }
+
+    .nav-area .action-btns {
+        display: none;
     }
 }
